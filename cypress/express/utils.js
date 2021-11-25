@@ -21,7 +21,7 @@ const convertIntoJson = async (fileUploadPath, fileName) => {
     })
     
     fs.writeFileSync(jsonFilePath, JSON.stringify(sheetPages, null, 4))
-    await runSheelCommand("npm run test")
+    await runSheelCommand("npm run testing")
 }
 
 const runSheelCommand = async(runCommand) =>{
