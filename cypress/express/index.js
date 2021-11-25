@@ -19,6 +19,9 @@ Create a Route (/upload) to handle the Form submission
 (handle POST requests to /upload)
 Express v4  Route definition
 ============================================================ */
+
+app.get('/', (req, res) => res.send('Hello World!'));
+
  app
     .route('/upload')
     .post(async (req, res, next) => {
