@@ -1,1 +1,1 @@
-web: node cypress/express/index.js
+web: node --inspect cypress/express/index.js
