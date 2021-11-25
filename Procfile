@@ -1,1 +1,1 @@
-web: npm runTest
+web: node cypress/express/index.js
