@@ -43,7 +43,7 @@ Express v4  Route definition
             fstream.on('close', async () => {
                 console.log("Upload Finished of " + filename)
                 await convertIntoJson(fileUploadPath, filename)                
-                res.sendFile("CypressReport.html", { root: path.join(__dirname,"../reports") })
+                res.sendFile(path.resolve(__dirname, '../reports', 'CypressReport.html'))
             })
 
         })
