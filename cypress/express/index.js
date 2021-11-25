@@ -20,7 +20,7 @@ Create a Route (/upload) to handle the Form submission
 Express v4  Route definition
 ============================================================ */
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', (req, res) =>     res.sendFile("index.html", { root: path.join(__dirname) }) );
 
  app
     .route('/upload')
