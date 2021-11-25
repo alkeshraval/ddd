@@ -10,8 +10,11 @@ const portNumber = process.env.PORT || 3000;
 const app = express()
 app.use(cors())
 app.use(busboy())
-app.use(express.static(path.join(__dirname)))
-app.use(express.static(path.join(__dirname,"../reports")));
+//app.use(express.static(path.join(__dirname)))
+//app.use(express.static(path.join(__dirname,"../reports")));
+
+app.use("/express", express.static(path.join(__dirname)))
+app.use("/reports", express.static(path.join(__dirname,"../reports")));
 
 /* ========================================================== 
 Create a Route (/upload) to handle the Form submission 
