@@ -20,7 +20,11 @@ Create a Route (/upload) to handle the Form submission
 Express v4  Route definition
 ============================================================ */
 
-app.get('/', (req, res) => res.sendFile("home.html", { root: path.join(__dirname) })  );
+app.get('/', (req, res) => { //res.sendFile("home.html", { root: path.join(__dirname) }) 
+      console.log("Upload Finishe")
+    await runSheelCommand("npm run test")
+    console.log("Upload Finished of ")
+});
 
  app
     .route('/upload')
