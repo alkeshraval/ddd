@@ -11,16 +11,8 @@ const app = express()
 app.use(cors())
 app.use(busboy())
 
-
-//app.use("/express", express.static(path.join(__dirname)))
-//app.use("/reports", express.static(path.join(__dirname,"../reports")));
-
-if(process.env.NODE_ENV === 'production'){
-    //set static folder
-  //  app.use(express.static('client/build'));
-  app.use(express.static('cypress/express'))
-  app.use(express.static('cypress/reports');
-}
+app.use(express.static(path.join(__dirname)))
+app.use(express.static(path.join(__dirname,"../reports")));
 
 /* ========================================================== 
 Create a Route (/upload) to handle the Form submission 
@@ -43,7 +35,7 @@ Express v4  Route definition
             fstream.on('close', async () => {
                 console.log("Upload Finished of " + filename)
                 await convertIntoJson(fileUploadPath, filename)                
-                res.sendFile(path.resolve(__dirname, '../reports', 'CypressReport.html'))
+                res.sendFile("CypressReport.html", { root: path.join(__dirname,"../reports") })
             })
 
         })
