@@ -11,7 +11,8 @@
     "beforTest": "npm run clean:reports && npm run clean:screenshots && npm run clean:uploadedExcelFiles",
     "test": "cypress run --browser chrome",
     "runTest": "node cypress/express/index.js",
-    "testing" : "node_modules\\.bin\\cypress run --headed --browser chrome"
+    "chromeHeaded" : "node_modules\\.bin\\cypress run --headed --browser chrome",
+    "chromeHeadless" : "node_modules\\.bin\\cypress run --headless --browser chrome"
   },
   "author": "Alkesh Raval",
   "license": "ISC",
